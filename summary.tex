@@ -42,6 +42,21 @@ Var(X) = np(1-p)
 If they have the \textbf{same p}, you add their n's when you add them.
 %
 \subsection{Negative Binomial}
+\subsubsection{What}
+\[
+X \sim NegBin(r, p)
+\]
+Do independent trials with probability p of success until r successes. X is the number of trials it takes.
+\subsubsection{Formulae}
+\[
+P(X = n) = {n - 1 \choose r - 1} p^r (1-p)^{n-r}
+\]
+\[
+E[X] = {r \over p}
+\]
+\[
+Var(X) = {r(1-p) \over p^2}
+\]
 %
 \subsection{Normal}
 %
