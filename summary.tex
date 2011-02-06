@@ -72,6 +72,17 @@ Var(X) &= \sigma^2
 Sum the $\mu$'s and the $\sigma^2$'s when you add normal RV's to get the $\mu$ and the $\sigma^2$ of the variable equal to the sum.
 %
 \subsection{Exponential}
+\subsubsection{What}
+Models time until an event happens. "Memoryless"--distribution looking forward isn't affected by how long since the last event.
+\subsubsection{Formulae}
+\begin{align*}
+X &\sim Exp(\lambda) \\
+PDF: f(x) &= \lambda e^{-\lambda x} & \text{if x} \geq 0 \text{ (else 0)} \\
+CDF: F(x) &= P(X \leq x) = 1 - e^{-\lambda x} & \text{where x} \geq 0 \\
+E[X] &= {1 \over \lambda} \\
+Var(X) &= {1 \over \lambda^2}
+\end{align*}
+\subsubsection{Combining}
 %
 \subsection{Geometric}
 %
