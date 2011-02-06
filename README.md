@@ -7,3 +7,5 @@ It is written in LaTeX
 Please fork the document and expand it.
 
 Go to the [downloads section](https://github.com/jackowayed/cs109-summary/archives/master) to download the PDF
+
+If anything is incorrect, open an issue on the issues tab or email me. Better yet, fix it and and me a pull request :)
