@@ -5,3 +5,5 @@ This document has formulas and other useful information about the first half of 
 It is written in LaTeX
 
 Please fork the document and expand it.
+
+Go to the [downloads section](https://github.com/jackowayed/cs109-summary/archives/master) to download the PDF
