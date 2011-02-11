@@ -19,11 +19,26 @@ This document has formulas and other useful information about the first half of 
 
 \section{Probability Properties}
 %
-\subsection{Axioms}
-%
+\subsection{Conditional Probability}
+\[
+P(E \mid F) = {P(EF) \over P(F)}
+\]
 \subsection{Chain Rule}
+Implied by conditional probability
+\begin{align*}
+&P(EF) = P(E \mid F) P(F) \\
+&\text{more generally:} \\
+&P(E_1 E_2 E_3 ... E_n) = P(E_1) P(E_2 \mid E_1) P(E_3 \mid E_1 E_2) ... P(E_n \mid E_1 E_2 ... E_{n-1})
+\end{align*}
 %
-\subsection{Bayes' Theorem}
+\subsection{Bayes' Theorem} Lots of forms
+\begin{align*}
+P(F \mid E) &= {P(EF) \over P(E)} \\
+&= {P(E \mid F) P(F) \over P(E)} \\
+&= {P(E \mid F) P(F) \over P(E \mid F) P(F) + P(E \mid F^c) P(F^c)} \\
+P(E) &= P(EF) + P(EF^c) \\
+&= P(E \mid F) P(F) + P(E \mid F^c) P(F^c)
+\end{align*}
 
 \section{Random Variables}
 %
