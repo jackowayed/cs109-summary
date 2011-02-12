@@ -17,6 +17,11 @@
 
 This document has formulas and other useful information about the first half of CS 109. The idea is that it should basically summarize everything we've learned so far and be super-valuable for the midterm.
 
+\section{Counting}
+\begin{align*}
+{n \choose k} &= {n-1 \choose k-1} + {n-1 \choose k} \\
+\end{align*}
+
 \section{Probability Properties}
 %
 \subsection{Conditional Probability}
@@ -39,6 +44,24 @@ P(F \mid E) &= {P(EF) \over P(E)} \\
 P(E) &= P(EF) + P(EF^c) \\
 &= P(E \mid F) P(F) + P(E \mid F^c) P(F^c)
 \end{align*}
+
+\subsection{Odds}
+\begin{align*}
+&{P(A) \over P(A^c)} = {P(a) \over 1-P(A)} \\
+&\text{After observing E, updated odds by multiplying by } {P(E \mid A) \over P(E \mid A^c)}
+\end{align*}
+
+\subsection{Conditional}
+Can condition consistently on an event and commutativity, chain rule, intersection, and Bonferroni all still hold:
+\begin{align*}
+P(AB \mid E) &= P(BA \mid E) \\
+P(AB \mid E) &= P(A \mid BE) P(B \mid E) \\
+P(A \mid BE) &= {P(B \mid AE) P(A \mid E) \over P(B \mid E)}
+\end{align*}
+
+\subsection{Dependence}
+E and F are independent iff $P(EF) = P(E) P(F)$. More generally:\\
+$E_1, E_2, ..., E_n$ are independent iff for every subset $E_1 ... E_r$ (where $ r \leq n$), $P(E_1 E_2 ... E_r) = P(E_1) P(E_2) ... P(E_r)$
 
 \section{Random Variables}
 %
