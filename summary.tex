@@ -107,12 +107,51 @@ Var(X) &= {1 \over \lambda^2}
 \end{align*}
 %
 \subsection{Geometric}
+\subsubsection{What}
+X is the number of independent trials (with probability p of success) until first success. $X \sim NegBin(1, p)$ See Negative Binomial.
+\[
+X \sim Geo(p)
+\]
 %
 \subsection{Hypergeometric}
+\subsubsection{What}
+Urn with N balls, m white. Draw n balls without replacement. X is number of white balls drawn.
+\[
+X \sim HypG(n, N, m)
+\]
+\subsubsection{Formulae}
+\begin{align*}
+PMF: P(X = i) &= { {m \choose i} {N-m \choose n-i} \over {N \choose n}} &i=0,1,...,n \\
+E[X] &= n \left( {m \over N} \right) \\
+Var(X) &= {nm(N-n)(N-m) \over N^2 (N-1)} \\
+\text{as } n &\to \infty, HypG(n, N, m) \to Bin(n, m/N)
+\end{align*}
 %
 \subsection{Poisson}
-
+\subsubsection{What}
+$\lambda$ is the rate. eg. $\lambda = 5 \to 5$ occurrences happening per time period. Also approximates the binomial distribution when n is large, p is small, and $\lambda = np$ is moderate. In fact, the limit as n goes to infinity and p goes to 0 of the binomial is the poisson
+\[
+X \sim Poi(\lambda)
+\]
+\subsubsection{Formulae}
+\begin{align*}
+PMF: P(X=i) = e^{-\lambda} {\lambda^i \over i!}
+\end{align*}
+\subsubsection{Combining}
+Sum the $\lambda$'s when summing poisson RV's
 %
 \subsection{Uniform}
+\subsubsection{What}
+X is equally likely to be any number between $\alpha$ and $\beta$
+\[
+X \sim Uni(\alpha, \beta)
+\]
+\subsubsection{Formulae}
+\begin{align*}
+PDF: f(x) &= {1 \over \beta - \alpha} & \alpha < x < \beta \text{ (else 0)} \\
+P(a \leq x \leq b) &= {b - a \over \beta - \alpha} \\
+E[X] &= {\alpha + \beta \over 2} \\
+Var(X) &= {(\beta - \alpha)^2 \over 12}
+\end{align*}
 
 \end{document}
