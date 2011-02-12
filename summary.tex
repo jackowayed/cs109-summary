@@ -153,5 +153,33 @@ P(a \leq x \leq b) &= {b - a \over \beta - \alpha} \\
 E[X] &= {\alpha + \beta \over 2} \\
 Var(X) &= {(\beta - \alpha)^2 \over 12}
 \end{align*}
+%
+\subsection{Beta}
+\subsubsection{What}
+Weird. Adapts as you change the params.\\
+One use: flip a coin with unknown probability of coming up heads. Get n heads and m tails. The distribution suggested by that is $X \sim Beta(n + 1, m + 1)$. \\
+symmetric when a = b.  High a shifts density right, high b shifts density left.
+\[
+X \sim Beta(a,b)
+\]
+\subsubsection{Formulae}
+\begin{align*}
+B(a,b) &= \int_0^1 x^{a-1} (1-x)^{b-1} dx \\
+f(x) &= {1 \over B(a,b)} x^{a-1} (1-x)^{b-1} & 0 < x < 1 \text{ (else }0)\\
+E[X] &= {a \over a + b} \\
+Var(X) &= {ab \over (a + b)^2 (a + b + 1)}
+\end{align*}
+%
+\subsection{Bernoulli}
+\subsubsection{What}
+1 with probability p and 0 with probability 1-p
+\[
+X \sim Ber(p)
+\]
+\subsubsection{Formulae}
+\begin{align*}
+E[X] &= p \\
+Var(X) &= p(1-p)
+\end{align*}
 
 \end{document}
