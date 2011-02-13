@@ -133,6 +133,13 @@ P(X < n) &= P({X - \mu \over \sigma} < P({n - \mu \over \sigma}) = P(Z < {n - \m
 P(X > n) &= P((X < n)^c) = 1 - \Phi({n - \mu \over \sigma}) \\
 \Phi(-z) &= P(Z \leq -z) = P(Z \geq z) = 1 - \Phi(z) & \text{by symmetry}
 \end{align*}
+\subsubsection{Continuity Correction}
+Use when approximating a discrete distribution (eg. binomial) with a continuous. Go either up or down by .5 to make up for the fact that it's continuous.
+\begin{align*}
+X &\sim Bin(1000, .5) \approx Y \sim N(500, 250)\\
+P(X \leq 499) &= P(X < 500) \approx P(Y < 499.5) \\
+P(X > 500) &= P(X \geq 499) \approx P(Y > 499.5)
+\end{align*}
 %
 \subsection{Exponential}
 \subsubsection{What}
