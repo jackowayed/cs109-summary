@@ -117,7 +117,8 @@ aka Gaussian. PDF is symmetric around $\mu$, peaks at $\mu$, ranges $-\infty, \i
 X &\sim N(\mu, \sigma^2) \\
 PDF: f(x) &= {1 \over \sigma \sqrt{2\pi}} e^{-(x-\mu)^2 / 2 \sigma^2} \\
 E[X] &= \mu \\
-Var(X) &= \sigma^2
+Var(X) &= \sigma^2 \\
+Bin(n, p) &\approx N(np, np(1-p)) & \text{if } np(1-p) \geq 20
 \end{align*}
 \subsubsection{Combining}
 Sum the $\mu$'s and the $\sigma^2$'s when you add normal RV's to get the $\mu$ and the $\sigma^2$ of the variable equal to the sum.
