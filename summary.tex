@@ -242,4 +242,41 @@ E[X] &= p \\
 Var(X) &= p(1-p)
 \end{align*}
 
+\section{Two Variables}
+\subsection{Definitions}
+\subsubsection{Joint PMF (Discrete)}
+\begin{align*}
+p_{X,Y}(a,b) = P(X = a, Y = b)
+\end{align*}
+\subsubsection{Marginal Distribution (Discrete)}
+isolates to 1 variable by summing over the other
+\begin{align*}
+p_X(a) &= P(X = a) = \sigma_y p_{x,y}(a,y) \\
+p_Y(b) &= P(Y = b) = \sigma_x p_{x,y}(x,b)
+\end{align*}
+\subsubsection{Joint CDF (Continuous)}
+\[
+F_{X,Y}(a,b) = P(X \leq a, Y \leq b)
+\]
+\subsubsection{Marginal Distribution (Continuous)}
+\begin{align*}
+F_X(a) &= P(X \leq a) = P(X \leq a, Y < \infty) = F_{X,Y}(a,\infty) \\
+F_Y(b) &= P(Y \leq b) = P(X < \infty, Y \leq a) = F_{X,Y}(\infty, b)
+\end{align*}
+\subsection{Independence}
+Discrete RV's X and Y are independent iff
+\begin{align*}
+p(x,y) &= p_X(x)p_Y(y) & \text{for all x,y}
+\end{align*}
+
+Continuous RV's X and Y are independent iff
+\begin{align*}
+P(X \leq a, Y \leq b) &= P(X\leq a)p(Y \leq b) & \text{for any a,b}
+\end{align*}
+
+\subsection{Expectation}
+Sum/integrate the variable times the marginal density for all possible values of the variable. Eg. continuous:
+\[
+E[X] = \int_{-\infty}^{\infty} xf_X(x) dx
+\]
 \end{document}
