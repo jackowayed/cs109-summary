@@ -121,7 +121,18 @@ Var(X) &= \sigma^2 \\
 Bin(n, p) &\approx N(np, np(1-p)) & \text{if } np(1-p) \geq 10
 \end{align*}
 \subsubsection{Combining}
-Sum the $\mu$'s and the $\sigma^2$'s when you add normal RV's to get the $\mu$ and the $\sigma^2$ of the variable equal to the sum.
+\[
+aN(\mu_1, \sigma_1^2) - bN(\mu_2, \sigma_2^2) = N(a\mu_1 - b\mu_2, a^2 \sigma_1^2 + b^2 \sigma_2^2)
+\]
+\subsubsection{Using standard normal table}
+\begin{align*}
+Z &\sim N(1,0) \\
+P(Z < n)&= P(Z \leq n) = \Phi(n) \\
+X &\sim N(\mu, \sigma^2) \\
+P(X < n) &= P({X - \mu \over \sigma} < P({n - \mu \over \sigma}) = P(Z < {n - \mu \over \sigma}) = \Phi({n - \mu \over \sigma}) \\
+P(X > n) &= P((X < n)^c) = 1 - \Phi({n - \mu \over \sigma}) \\
+\Phi(-z) &= P(Z \leq -z) = P(Z \geq z) = 1 - \Phi(z) & \text{by symmetry}
+\end{align*}
 %
 \subsection{Exponential}
 \subsubsection{What}
