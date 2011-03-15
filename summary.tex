@@ -278,4 +278,18 @@ Sum/integrate the variable times the marginal density for all possible values of
 \[
 E[X] = \int_{-\infty}^{\infty} xf_X(x) dx
 \]
+\section{Linearity of Expectation}
+\[
+E\left[\sum_i X_i\right] = \sum_i E[X_i]
+\]
+regardless of dependence between the $X_i$'s. Very useful.
+\section{Covariance and Correlation}
+\subsection{Covariance}
+\begin{align*}
+&Cov(X,Y) = E[XY] - E[X]E[Y] \\
+&Cov(X,X) = E[X^2] - (E[X])^2 = Var(X) \\
+&Cov(aX+b, Y) = a Cov(X,Y)\\
+&\text{if X and Y are independent } Cov(X,Y)=0 \\
+%&Cov\left(\sum_{i=1}^n X_i, \sum_{i=1}^n Y_i}	\right)
+\end{align*}
 \end{document}
