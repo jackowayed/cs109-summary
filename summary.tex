@@ -338,6 +338,16 @@ M(t) is the MGF for RV X
 &P(X \geq a) \leq e^{-ta} M(t) \text{ for all } t > 0 \\
 &P(X \leq a) \leq e^{-ta} M(t) \text{ for all } t < 0
 \end{align*}
+\section{Central Limit Theorem}
+\begin{align*}
+&\overline{X} \sim N(\mu, {\sigma^2 \over n}) \text{ as } n \to \infty \\
+\end{align*}
+\subsection{Confidence Intervals}
+$100(1 - \alpha)$\% confidence interval means that $100(1 - \alpha)$\% of the time that the interval is computed, the interval contains $\mu$. Interval:
+\begin{align*}
+&z_{a/2} = \Phi^{-1}\left(1 - {\alpha \over 2}\right) \\
+&\left(\overline{X} - z_{a/2} {S \over \sqrt{n}}, \overline{X} + z_{a/2} {S \over \sqrt{n}} \right)
+\end{align*}
 \section{General Approach}
 What's independent?\\
 Where are there symmetries? (Can we break it up?)\\
