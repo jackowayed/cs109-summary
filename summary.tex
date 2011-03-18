@@ -316,6 +316,28 @@ P(\left| \overline{X} - \mu \right| \geq \epsilon) \to 0 \text{ as } n \to \inft
 \[
 P\left( \lim_{n\to\infty} \left( X_1 + X_2 + ... + X_n \over n \right) = \mu \right) = 1
 \]
+\section{Inequalities}
+\subsection{Markov's Inequality}
+X is a non-negative RV
+\[
+P(X \geq a) \leq {E[X] \over a} \text{ for all } a > 0
+\]
+\subsection{Chebyshev's Inequality}
+X is an RV. E[X] = $\mu$, Var(X) = $\sigma^2$
+\[
+P(\left|X - \mu\right| \geq k) \leq {\sigma^2 \over k^2} \text{ for all } k > 0
+\]
+\subsection{One-sided Chebyshev's Inequality}
+X is an RV. E[X] = $\mu$, Var(X) = $\sigma^2$
+\[
+P(X \geq a) \leq {\sigma^2 \over \sigma^2 + a^2} \text{ for any } a > 0
+\]
+\subsection{Chernoff Bound}
+M(t) is the MGF for RV X
+\begin{align*}
+&P(X \geq a) \leq e^{-ta} M(t) \text{ for all } t > 0 \\
+&P(X \leq a) \leq e^{-ta} M(t) \text{ for all } t < 0
+\end{align*}
 \section{General Approach}
 What's independent?\\
 Where are there symmetries? (Can we break it up?)\\
