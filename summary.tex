@@ -301,6 +301,21 @@ regardless of dependence between the $X_i$'s. Very useful.
 \section{Bias \& Consistency}
 \subsection{Bias}
 An estimator is unbiased iff $E[\hat{\theta}] - \theta = 0$
+\subsection{Consistency}
+An estimator is consistent iff
+\[
+\lim_{n \to \infty} P(\left| \hat{\theta} - \theta \right| < \epsilon) = 1 \text{ for } \epsilon > 0
+\]
+\section{Laws of Large Numbers}
+\subsection{Weak}
+For any $\epsilon > 0$
+\[
+P(\left| \overline{X} - \mu \right| \geq \epsilon) \to 0 \text{ as } n \to \infty
+\]
+\subsection{Strong}
+\[
+P\left( \lim_{n\to\infty} \left( X_1 + X_2 + ... + X_n \over n \right) = \mu \right) = 1
+\]
 \section{General Approach}
 What's independent?\\
 Where are there symmetries? (Can we break it up?)\\
